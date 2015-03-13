@@ -5,12 +5,9 @@ function Device(tz_serial, manufacturing_serial, gtin, sim_number, imei, pcb_par
 	this.tzSerial = tz_serial;
 	this.manufacturingSerial = manufacturing_serial;
 	this.gtin = gtin;
-	this.hasModem = (has_modem === 1 || has_modem === "1");
-	if (this.hasModem) {
-		this.iccid = sim_number;
-		this.imei = imei;
-	}
-	this.pcbPartNumber = afe_part_number;
+	this.iccid = sim_number;
+	this.imei = imei;
+	this.pcbPartNumber = pcb_part_number;
 	this.firmwareVersion = firmware_version;
 }
 
